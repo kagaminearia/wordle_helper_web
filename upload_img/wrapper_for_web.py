@@ -1,5 +1,5 @@
 import numpy as np
-import cv2
+# import cv2
 # import pytesseract as pyt
 from matplotlib import pyplot as plt
 from skimage.measure import regionprops, label
@@ -8,6 +8,7 @@ from time import time
 import matplotlib.pyplot as plt
 from typing import List, Set, Tuple
 import os
+import cv2
 
 PATH = os.path.dirname(os.path.abspath(__file__)) + '/'
 
