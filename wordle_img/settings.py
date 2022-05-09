@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'fierce-depths-69391.herokuapp.com',
+    'wordle--helper.herokuapp.com',
     '127.0.0.1'
 ]
 
