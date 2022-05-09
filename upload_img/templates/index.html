@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Wordle Helper</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+<div class="top"><h1>Django Wordle Helper</h1></div>
+<div class="intro">
+  Upload screenshots for your current 
+    <a href="https://www.nytimes.com/games/wordle/index.html">wordle</a>
+    game
+</div>
+<div class="img_upload">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+     <p id="upload_id">
+       <label for="id_image">Image:</label>
+       <input type="file" name="image" accept="image/*" required id="id_image">
+     </p>
+    <button type="submit">Upload</button>
+  </form>
+</div>
+{% if img_obj %}
+<div class="results">
+  <h4>Succesfully uploaded the image for {{img_obj.image_name}}</h4>
+  <h4>{{img_obj.time_cons}}</h4>
+  <h4>The suggestions of current game is/are: </h4>
+  <h4>{{img_obj.get_results}}</h4>
+</div>
+<div class="img_show">
+  <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+</div>
+{% endif %}
+<div class="bottom"><a href = "mailto: seventyninehundreds@gmail.com">seventyninehundreds@gmail.com</a></div>
+</body>
+</html>
+
