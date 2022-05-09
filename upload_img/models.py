@@ -15,19 +15,20 @@ class Image(models.Model):
         return os.path.basename(self.image.name)
     
     def get_read_img(self):
-        path = "/home/st/wordle_img/media/" + self.image.name
+        path = self.image.path
+        # path = "/home/st/wordle_img/media/" + self.image.name
         chars = read_img(path)
         gray = chars[0]
         yellow = chars[1]
         green = chars[2]
 
     def get_results(self):
-        path = "/home/st/wordle_img/media/" + self.image.name
+        path = self.image.path
         ans = get_res(read_img(path))
         return str(ans[0])
 
     def time_cons(self):
-        path = "/home/st/wordle_img/media/" + self.image.name
+        path = self.image.path
         ans = get_res(read_img(path))
         return "Executing in " + str(ans[1]) + " seconds"
 
