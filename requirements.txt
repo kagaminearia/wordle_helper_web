@@ -2,7 +2,7 @@ django
 gunicorn
 django-heroku
 scikit-image==0.16.2
-opencv-python-headless
+opencv-python-headless==4.2.0.32
 matplotlib>=3.1.2
 numpy
 django_cleanup
