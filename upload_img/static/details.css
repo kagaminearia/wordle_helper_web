@@ -39,7 +39,25 @@ body {
     color: #787c7e;
 }
 
+.instructions a:link {
+    color: #787c7e;
+    text-decoration: none;
+}
+
+.instructions a:visited {
+    color: #787c7e;
+    text-decoration: none;
+}
+
 .contact {
-    bottom: 5px;
+    margin-top: 40px;
+}
+.contact a:link{
+    color: #787c7e;
+    text-decoration: none;
+}
+
+.contact a:link{
+    color: #787c7e;
     text-decoration: none;
 }
