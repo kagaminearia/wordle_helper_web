@@ -7,10 +7,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Wordle Helper</title>
-  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'index.css' %}">
 </head>
 <body>
-<div class="top"><h1>Django Wordle Helper</h1></div>
+<div class="top"><h1>Wordle Helper</h1></div>
 <div class="intro">
   Upload screenshots for your current 
     <a href="https://www.nytimes.com/games/wordle/index.html">wordle</a>
@@ -29,15 +29,23 @@
 {% if img_obj %}
 <div class="results">
   <h4>Succesfully uploaded the image for {{img_obj.image_name}}</h4>
-  <h4>{{img_obj.time_cons}}</h4>
   <h4>The suggestions of current game is/are: </h4>
   <h4>{{img_obj.get_results}}</h4>
+  <h4>Executing in {{img_obj.time}} seconds</h4>
 </div>
 <div class="img_show">
   <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
 </div>
 {% endif %}
-<div class="bottom"><a href = "mailto: seventyninehundreds@gmail.com">seventyninehundreds@gmail.com</a></div>
+<!-- <div class="bottom"><a href = "mailto: seventyninehundreds@gmail.com">seventyninehundreds@gmail.com</a></div> -->
+<!-- <div class="detail">
+  <button class = "bu" id = "popup" onclick = 
+  'f=window.open("details.html","fenetre","the style (without style tag, example - width=400, height=600, no px")'>
+  instruction</button>
+</div> -->
+<div class="detail">
+  <a href={% url 'details' %}>About </a>
+</div>
 </body>
 </html>
 

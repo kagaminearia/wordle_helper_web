@@ -67,7 +67,7 @@ body {
 }
 
 .results h4 {
-    color:black;
+    color: black;
     font-weight:normal;
 }
 
@@ -75,14 +75,20 @@ body {
     margin-top: 40px;
 }
 
-.bottom{ 
-    position: fixed;     
-    text-align: center;    
-    bottom: 5px; 
-    width: 100%;
-} 
+.detail {
+    margin-top: 40px;
+}
 
-.bottom a:link {
-    color: black;
+
+.detail a:link{
+    color: #787c7e;
     text-decoration: none;
 }
+
+.detail a:visited {
+    color: #787c7e;
+    text-decoration: none;
+}
+
+
+

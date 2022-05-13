@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Wordle Helper</title>
+  <link rel="stylesheet" href="{% static 'details.css' %}">
+</head>
+<body>
+  <div class="top"><h1>Wordle Helper</h1></div>
+  <div class="intro">
+    Upload screenshots for your current 
+      <a href="https://www.nytimes.com/games/wordle/index.html">wordle</a>
+      game
+  </div>
+  <div class="instructions">
+    <h4>Valid screenshots will look like</h4>
+    <img src="{% static 'wordle_sample.png' %}" alt="connect" style="max-height:300px">
+    <h4></h4>
+    <a href={% url 'index' %}>Return to the Main Page</a>
+  </div>
+  <div class="contact">
+    <a href = "mailto: shadowcatlegion@gmail.com">shadowcatlegion@gmail.com</a>
+  </div>
+</body>

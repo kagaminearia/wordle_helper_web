@@ -14,3 +14,7 @@ def index(request):
         form = ImageForm()
     return render(request, 'index.html', {'form': form})
 
+
+def details(request):
+    return render(request, 'details.html')
+    # return HttpResponseRedirect('details.html')

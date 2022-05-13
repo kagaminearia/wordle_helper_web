@@ -6,6 +6,7 @@ from .wrapper_for_web import *
 class Image(models.Model):
     title = "wordle"
     image = models.ImageField(upload_to='images')
+    time = 0
 
     def __str__(self):
         return self.title
@@ -25,6 +26,7 @@ class Image(models.Model):
     def get_results(self):
         path = self.image.path
         ans = get_res(read_img(path))
+        self.time = str(ans[1])
         return str(ans[0])
 
     def time_cons(self):

@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    /* font-family: MS Gothic; */
+    font-family: system-ui;
+}
+
+.top {
+    top:0;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.top h1 {
+    width:400px;
+    margin: 0 auto;
+    text-align: center;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #6aaa64;
+    background-color: #6aaa64;
+}
+
+.intro {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.intro a:link{
+    color: #6aaa64;
+    text-decoration: none;
+}
+
+.intro a:visited {
+    color: #6aaa64;
+    text-decoration: none;
+}
+
+.instructions {
+    color: #787c7e;
+}
+
+.contact {
+    bottom: 5px;
+    text-decoration: none;
+}
